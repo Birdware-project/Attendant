@@ -71,7 +71,7 @@ namespace TimeLogin
                 var _username = kd["name"].ToString();
                 var _password = kd["password"].ToString();
 
-                if (this.txt_username.Text == _username
+                if (this.txt_username.Text == _username.Trim()
                 && this.txt_password.Text == _password)
                 {
                     if (!checkAlreadyLogin(int.Parse(_ID)))
@@ -147,7 +147,7 @@ namespace TimeLogin
                 var _username = kd["name"].ToString();
                 var _password = kd["password"].ToString();
 
-                if (this.txt_username.Text == _username && this.txt_password.Text == _password)
+                if (this.txt_username.Text == _username.Trim() && this.txt_password.Text == _password)
                 {
                     cnn.Close();
                     Con = new SqlCommand();

@@ -1,6 +1,6 @@
 CREATE TABLE Users (
     ID int identity(1,1) primary key,
-    Name varchar(255),
+    Name Nchar(255),
     Password varchar(255)
 );
 create table attendant(
