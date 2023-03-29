@@ -32,7 +32,7 @@ namespace TimeLogin
             Con = new SqlCommand();
             Con.CommandText = "insert into users(Name,Password)" +
                 "values(@name,@password)";
-            Con.Parameters.Add("@name", SqlDbType.VarChar, 250).Value = txt_name.Text;
+            Con.Parameters.Add("@name", SqlDbType.NChar, 250).Value = txt_name.Text;
             Con.Parameters.Add("@password", SqlDbType.VarChar,250).Value = txt_password.Text;
             cnn.Open();
             Con.Connection = cnn;
