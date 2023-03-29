@@ -56,7 +56,7 @@ namespace TimeLogin
         {
             Con = new SqlCommand();
             Con.CommandText = "select * from users where name=@username";
-            Con.Parameters.Add("@username", SqlDbType.VarChar).Value = this.txt_username.Text;
+            Con.Parameters.Add("@username", SqlDbType.NChar).Value = this.txt_username.Text;
             Con.Connection = cnn;
             cnn.Open();
             SqlDataReader kd;
@@ -132,7 +132,7 @@ namespace TimeLogin
         {
             Con = new SqlCommand();
             Con.CommandText = "select * from users where name=@username";
-            Con.Parameters.Add("@username", SqlDbType.VarChar).Value = this.txt_username.Text;
+            Con.Parameters.Add("@username", SqlDbType.NChar).Value = this.txt_username.Text;
             Con.Connection = cnn;
             cnn.Open();
             SqlDataReader kd;
